@@ -4,6 +4,13 @@ import TodoRowItem from './components/TodoRowItem';
 
 
 function App() {
+
+  const todos = [
+    {rownumber: 1, rowDiscription: 'Feed Puppy',rowAssigned: 'Paki'},
+    {rownumber: 2, rowDiscription: 'Water plants',rowAssigned: 'Scl'},
+    {rownumber: 3, rowDiscription: 'Make Dinner',rowAssigned: 'Bng'}
+  ];
+
   return (
     <div className='mt-5 container'>
       <div className='card'>
@@ -17,13 +24,18 @@ function App() {
                 <th scope='col'>Scope</th></tr>              
             </thead>
             <tbody>
-                <TodoRowItem/>
-                <TodoRowItem/>
-                <tr>
-                  <th scope='row'>2</th>
-                  <td>Get India Win</td>
-                  <td>Travis</td>
-                </tr>
+                <TodoRowItem rownumber={todos[0].rownumber} 
+                  rowDiscription={todos[0].rowDiscription} 
+                  rowAssigned={todos[0].rowAssigned}
+                />
+                <TodoRowItem rownumber={todos[1].rownumber} 
+                  rowDiscription={todos[1].rowDiscription} 
+                  rowAssigned={todos[1].rowAssigned}
+                />
+                <TodoRowItem rownumber={todos[2].rownumber} 
+                  rowDiscription={todos[2].rowDiscription} 
+                  rowAssigned={todos[2].rowAssigned}
+                />
             </tbody>
           </table>
         </div>
